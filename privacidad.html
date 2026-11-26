@@ -10,38 +10,50 @@
   main { max-width: 760px; margin: 0 auto; padding: 48px 24px; line-height: 1.65; }
   h1 { color: #ffba49; } h2 { margin-top: 32px; color: #ffba49; font-size: 1.2rem; }
   a { color: #ffba49; } li { margin: 6px 0; }
+  .box { border: 1px solid #ffba49; border-radius: 10px; padding: 12px 18px; background: #222552; }
 </style>
 </head>
 <body>
 <main>
-<h1>Política de privacidad</h1>
+<h1>Política de privacidad de CanalIA</h1>
 <p><em>Última actualización: 26 de noviembre de 2026</em></p>
 
 <p>"CanalIA" es una herramienta privada que usa el creador del canal <strong>Humanos de Verdad</strong>
-para publicar sus propios videos en sus propias cuentas. No es un servicio abierto al público y no
-la usan otras personas.</p>
+para publicar sus propios videos en sus propias cuentas. No es un servicio abierto al público.</p>
 
-<h2>Qué datos usa</h2>
+<h2>Uso de los Servicios de API de YouTube</h2>
+<div class="box">
+<p><strong>CanalIA utiliza los Servicios de API de YouTube.</strong> Al usar CanalIA aceptas quedar vinculado por las
+<a href="https://www.youtube.com/t/terms">Condiciones del Servicio de YouTube</a>.
+El tratamiento de datos por parte de Google se rige por la
+<a href="http://www.google.com/policies/privacy">Política de Privacidad de Google</a>.</p>
+</div>
+
+<h2>Qué información se accede, recopila y usa</h2>
 <ul>
-  <li><strong>YouTube (API de datos de YouTube):</strong> la herramienta solo sube videos al canal del propio
-      creador y lee el nombre de ese canal para confirmar que la conexión es correcta.</li>
-  <li><strong>Facebook (si se activa):</strong> solo publica videos en la página del propio creador.</li>
+  <li><strong>Permiso <code>youtube.upload</code>:</strong> subir videos al canal del propio usuario autorizado,
+      con su título, descripción y etiquetas (método <code>videos.insert</code>) y su miniatura (<code>thumbnails.set</code>).</li>
+  <li><strong>Permiso <code>youtube.readonly</code>:</strong> leer el nombre del canal autorizado únicamente para confirmar
+      que la conexión es correcta (<code>channels.list</code>).</li>
+  <li>No se accede a datos de espectadores, comentarios, suscriptores, estadísticas ni a otros canales.</li>
 </ul>
 
-<h2>Cómo se guardan</h2>
-<p>Los permisos de acceso (tokens) se guardan únicamente en la computadora del creador. No se envían a
-ningún servidor propio ni a terceros, y no se venden ni se comparten.</p>
+<h2>Cómo se almacena y comparte la información</h2>
+<ul>
+  <li>El token de autorización de OAuth se guarda <strong>solo en la computadora del usuario</strong>, en un archivo local.</li>
+  <li>No existe ningún servidor de CanalIA: los datos no se envían, venden ni comparten con terceros.</li>
+  <li>No se usan cookies ni tecnologías de seguimiento, y no se colocan cookies en el dispositivo del usuario.</li>
+</ul>
 
-<h2>Datos de otras personas</h2>
-<p>La herramienta no recopila, almacena ni procesa datos de espectadores ni de otros usuarios.</p>
-
-<h2>Servicios de terceros</h2>
-<p>El uso de YouTube está sujeto a las <a href="https://www.youtube.com/t/terms">Condiciones del servicio de YouTube</a>
-y a la <a href="https://policies.google.com/privacy">Política de privacidad de Google</a>.</p>
-
-<h2>Cómo revocar el acceso</h2>
-<p>El acceso se puede retirar en cualquier momento desde
-<a href="https://myaccount.google.com/permissions">la configuración de seguridad de tu cuenta de Google</a>.</p>
+<h2>Eliminación de datos y revocación del acceso</h2>
+<ul>
+  <li>El usuario puede revocar el acceso de CanalIA en cualquier momento desde la
+      <a href="https://security.google.com/settings/security/permissions">página de configuración de seguridad de Google</a>.</li>
+  <li>Al revocar el acceso, o al borrar el archivo <code>credentials/youtube_token.json</code>, se elimina toda la
+      información de autorización almacenada. CanalIA no conserva ninguna otra copia.</li>
+  <li>Los datos de la API se guardan como máximo mientras la autorización siga activa y se eliminan en un plazo de
+      7 días después de revocarla. También puedes pedir la eliminación escribiendo al correo de contacto.</li>
+</ul>
 
 <h2>Contacto</h2>
 <p>Para cualquier duda: <a href="mailto:juanfranortega3135@gmail.com">juanfranortega3135@gmail.com</a></p>
